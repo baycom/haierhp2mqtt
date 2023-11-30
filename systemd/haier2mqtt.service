@@ -2,8 +2,8 @@
 Description=Haier MODBUS -> MQTT Bridge
 
 [Service]
-ExecStart=/usr/bin/node /home/pi/proj/smarthome/haier2mqtt/index.js
-WorkingDirectory=/home/pi/proj/smarthome/haier2mqtt
+ExecStart=/usr/bin/node /home/pi/proj/smarthome/haierhp2mqtt/index.js
+WorkingDirectory=/home/pi/proj/smarthome/haierhp2mqtt
 Restart=always
 RestartSec=1
 
