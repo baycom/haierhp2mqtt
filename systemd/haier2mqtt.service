@@ -1,0 +1,11 @@
+[Unit]
+Description=Haier MODBUS -> MQTT Bridge
+
+[Service]
+ExecStart=/usr/bin/node /home/pi/proj/smarthome/haier2mqtt/index.js
+WorkingDirectory=/home/pi/proj/smarthome/haier2mqtt
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
