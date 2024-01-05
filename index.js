@@ -60,13 +60,13 @@ function sendMqtt(id, data) {
 	if (options.debug) {
 		console.log("publish: " + 'Haier/' + id, JSON.stringify(data));
 	}
-	MQTTclient.publish('Haier/' + id, JSON.stringify(data));
+	MQTTclient.publish('Haier/' + id, JSON.stringify(data), { retain: true });
 }
 
 const HaierHPPayloadParser = new Parser()
 	.uint16be('Status')
 	.uint16be('LastError')
-	.int16be('PdTemp', { formatter: (x) => {return x/10.0;}})
+	.int16be('Register2')
 	.int16be('Register3')
 	.int16be('Register4')
 	.int16be('Register5')
